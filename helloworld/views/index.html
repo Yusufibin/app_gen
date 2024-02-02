@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reconnaissance Faciale App</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body class="container mt-5">
+  <div class="custom-file mb-3">
+    <input type="file" class="custom-file-input" id="inputImage" accept="image/*">
+    <label class="custom-file-label" for="inputImage">Choisir un fichier</label>
+  </div>
+  <button class="btn btn-primary" onclick="processImage()">Analyser l'image</button>
+  <div id="result" class="mt-3"></div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script>
+    document.getElementById('inputImage').addEventListener('change', handleImage);
+
+    function handleImage(event) {
+      const file = event.target.files[0];
+      if (file) {
+        const imageUrl = URL.createObjectURL(file);
+        // Afficher l'image ou traiter directement ici si nécessaire
+      }
+    }
+
+    function processImage() {
+      // Appel à ton API de reconnaissance faciale ici
+      // Afficher les résultats dans la div avec l'id "result"
+    }
+  </script>
+</body>
+</html>
